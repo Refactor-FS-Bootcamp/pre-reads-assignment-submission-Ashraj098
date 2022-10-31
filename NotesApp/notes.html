@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Editor</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main class="container">
+        <form action="">
+            <!-- <label for="addTitle">Add Title:</label><br> -->
+            <input type="text" id="note-title" placeholder="Add title...">
+            <br>
+            <!-- <label for="yourNotes">Write Notes here:</label><br> -->
+            <textarea name="notes" id="note-text" placeholder="Your Notes..." cols="30" rows="5"></textarea>
+            <button id="add-btn" type="button">Add Notes</button>
+
+        </form>
+        <section class="container">
+            <h2>Your Notes</h2>
+            <hr>
+            <div id="notes">
+                <div id="note">
+                    <h3 class="note-title">Title Here</h3>
+                    <p class="note-text">Description here</p>
+                    <p class="note-time">Saturday 12:00 Am</p>
+                    <button class="dlt-btn ">Delete Note</button>
+                    <button class="edit-btn ">Edit Note</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="notes.js"></script>
+</body>
+
+</html>
