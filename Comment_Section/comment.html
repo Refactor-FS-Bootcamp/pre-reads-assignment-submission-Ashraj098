@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMENT SECTION</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="comment.css">
+</head>
+
+<body>
+    <header>
+        <h1>Comment Section</h1>
+    </header>
+    <main class="container">
+        <form action="">
+            <!-- <label for="addTitle">Add Title:</label><br> -->
+            <input type="text" id="note-title" placeholder="User Name">
+            <br>
+            <!-- <label for="yourNotes">Write Notes here:</label><br> -->
+            <textarea name="notes" id="note-text" placeholder="Comment..." cols="30" rows="5"></textarea>
+            <button id="add-btn" type="button">Comment</button>
+
+        </form>
+        <section class="container">
+            <h2>Comments</h2>
+            <hr>
+            <div id="notes">
+                <div id="note">
+                    <h3 class="note-title">${element.title}</h3>
+                    <p class="note-text">${element.text}</p>
+                    <div class="voting">
+                        <button type="button" id="${index}" onclick="likeComment(this.id)" class="likebtn"><i
+                                class="fa fa-thumbs-up"></i> </button>
+                        <input type="number" class="input1" value="0" name="">
+                        <button type="button" id="${index}" onclick="dislikeComment(this.id)" class="dislikebtn"><i
+                                class="fa fa-thumbs-down"></i> </button>
+                        <input type="number" class="input2" value="0" name="">
+                        <button type="button" id="${index}" onclick="deleteNote(this.id)" class="dlt-btn"><i
+                                class="fa fa-trash"></i> </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="comment.js"></script>
+</body>
+
+</html>
